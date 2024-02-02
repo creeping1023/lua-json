@@ -2,6 +2,7 @@
   "name": "lua-json",
   "version": "1.0.1",
   "description": "Convert Lua tables to and from JSON",
+  "type": "module",
   "keywords": [
     "json",
     "lua",
@@ -24,18 +25,22 @@
     "format": "prettier --loglevel warn --write '**/*.{js,json,md,ts,yaml,yml}'",
     "lint": "eslint --fix .",
     "test": "yarn format && yarn lint && node test.js",
-    "up": "yarn upgrade --latest"
+    "up": "yarn upgrade --latest",
+    "build": "rollup -c"
   },
   "dependencies": {
     "lodash": "^4.17.11",
     "luaparse": "^0.2.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rollup": "^4.9.6"
   },
   "eslintConfig": {
     "env": {
